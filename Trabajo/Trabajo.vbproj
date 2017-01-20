@@ -79,6 +79,24 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmOpciones.Designer.vb">
+      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmOpciones.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="inici.Designer.vb">
+      <DependentUpon>inici.vb</DependentUpon>
+    </Compile>
+    <Compile Include="inici.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loguin.Designer.vb">
+      <DependentUpon>Loguin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Loguin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -98,6 +116,15 @@
   <ItemGroup>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOpciones.resx">
+      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="inici.resx">
+      <DependentUpon>inici.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loguin.resx">
+      <DependentUpon>Loguin.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
