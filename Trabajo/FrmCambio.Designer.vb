@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FrmOpciones
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class FrmCambio
     Inherits System.Windows.Forms.Form
 
     'Form reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,14 +20,15 @@ Partial Class FrmOpciones
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label3 = New System.Windows.Forms.Label()
+        Me.z = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'RadioButton1
@@ -77,21 +78,31 @@ Partial Class FrmOpciones
         Me.TextBox1.Size = New System.Drawing.Size(272, 20)
         Me.TextBox1.TabIndex = 4
         '
-        'Label3
+        'z
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(221, 224)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(28, 13)
-        Me.Label3.TabIndex = 5
-        Me.Label3.Text = "Tipo"
+        Me.z.Location = New System.Drawing.Point(13, 162)
+        Me.z.Name = "z"
+        Me.z.Size = New System.Drawing.Size(127, 38)
+        Me.z.TabIndex = 5
+        Me.z.Text = "Aceptar"
+        Me.z.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Location = New System.Drawing.Point(332, 162)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(127, 38)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "Salir"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'FrmOpciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(471, 460)
-        Me.Controls.Add(Me.Label3)
+        Me.ClientSize = New System.Drawing.Size(471, 204)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.z)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -109,5 +120,6 @@ Partial Class FrmOpciones
     Friend WithEvents Label1 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label3 As Label
+    Friend WithEvents z As Button
+    Friend WithEvents Button2 As Button
 End Class

@@ -79,10 +79,10 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmOpciones.Designer.vb">
-      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    <Compile Include="FrmCambio.Designer.vb">
+      <DependentUpon>FrmCambio.vb</DependentUpon>
     </Compile>
-    <Compile Include="FrmOpciones.vb">
+    <Compile Include="FrmCambio.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="inici.Designer.vb">
@@ -117,8 +117,8 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmOpciones.resx">
-      <DependentUpon>FrmOpciones.vb</DependentUpon>
+    <EmbeddedResource Include="FrmCambio.resx">
+      <DependentUpon>FrmCambio.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inici.resx">
       <DependentUpon>inici.vb</DependentUpon>
