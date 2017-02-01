@@ -80,7 +80,7 @@ Partial Class FrmCambio
         '
         'z
         '
-        Me.z.Location = New System.Drawing.Point(13, 162)
+        Me.z.Location = New System.Drawing.Point(12, 324)
         Me.z.Name = "z"
         Me.z.Size = New System.Drawing.Size(127, 38)
         Me.z.TabIndex = 5
@@ -89,18 +89,18 @@ Partial Class FrmCambio
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(332, 162)
+        Me.Button2.Location = New System.Drawing.Point(332, 324)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(127, 38)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "Salir"
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'FrmOpciones
+        'FrmCambio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(471, 204)
+        Me.ClientSize = New System.Drawing.Size(471, 374)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.z)
         Me.Controls.Add(Me.TextBox1)
@@ -108,7 +108,7 @@ Partial Class FrmCambio
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
-        Me.Name = "FrmOpciones"
+        Me.Name = "FrmCambio"
         Me.Text = "FrmOpciones"
         Me.ResumeLayout(False)
         Me.PerformLayout()

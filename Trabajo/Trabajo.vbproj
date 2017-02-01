@@ -79,10 +79,34 @@
       <DependentUpon>Form1.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmAñadir.Designer.vb">
+      <DependentUpon>FrmAñadir.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAñadir.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAñadirAdmin.Designer.vb">
+      <DependentUpon>FrmAñadirAdmin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAñadirAdmin.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FrmCambio.Designer.vb">
       <DependentUpon>FrmCambio.vb</DependentUpon>
     </Compile>
     <Compile Include="FrmCambio.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmControlUsuarios.Designer.vb">
+      <DependentUpon>FrmControlUsuarios.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmControlUsuarios.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmopciones.Designer.vb">
+      <DependentUpon>frmopciones.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmopciones.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="inici.Designer.vb">
@@ -117,8 +141,20 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmAñadir.resx">
+      <DependentUpon>FrmAñadir.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAñadirAdmin.resx">
+      <DependentUpon>FrmAñadirAdmin.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCambio.resx">
       <DependentUpon>FrmCambio.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmControlUsuarios.resx">
+      <DependentUpon>FrmControlUsuarios.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmopciones.resx">
+      <DependentUpon>frmopciones.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inici.resx">
       <DependentUpon>inici.vb</DependentUpon>
