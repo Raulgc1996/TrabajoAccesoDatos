@@ -96,4 +96,32 @@ Public Class FrmCambio
             End If
         End If
     End Sub
+
+    Private Sub BtnBorrarTodasLasFamilias_Click(sender As Object, e As EventArgs) Handles BtnBorrarTodasLasFamilias.Click
+        Dim mensaje As String
+        mensaje = negocio.QuitarTodasLasFamilias()
+        If mensaje = "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico" Then
+            MessageBox.Show(mensaje)
+        Else
+            lsbFamilias.Items.Clear()
+            lsbFamilias.Items.AddRange(negocio.CargarFamiliasExistentes.ToArray)
+            lsbFamilias.DisplayMember = "NombreCompleto"
+        End If
+    End Sub
+
+    Private Sub BtnBorrarFamilia_Click(sender As Object, e As EventArgs) Handles BtnBorrarFamilia.Click
+        If lsbFamilias.SelectedItem Is Nothing Then
+            MessageBox.Show("Debe seleccionar una familia")
+        Else
+            Dim mensaje As String
+            mensaje = negocio.QuitarUnaFamilia(lsbFamilias.SelectedItem.Id)
+            If mensaje = "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico" Then
+                MessageBox.Show(mensaje)
+            Else
+                lsbFamilias.Items.Clear()
+                lsbFamilias.Items.AddRange(negocio.CargarFamiliasExistentes.ToArray)
+                lsbFamilias.DisplayMember = "NombreCompleto"
+            End If
+        End If
+    End Sub
 End Class

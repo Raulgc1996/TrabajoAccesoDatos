@@ -1,6 +1,6 @@
 ﻿Public Class inici
     Private Sub inici_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        'dataset1.desainer MIRAR!!
         Dim tituloYLogo() As String
         tituloYLogo = ObtenerNombreYLogoDeLaTienda()
 
