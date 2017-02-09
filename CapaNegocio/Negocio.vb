@@ -29,4 +29,13 @@ Public Class Negocio
     Public Function CargarSubfamiasDeUnaFamilia(ByVal idFamilia As Integer) As List(Of SubFamilia)
         Return dato.CargarSubfamiasDeUnaFamilia(idFamilia)
     End Function
+    Public Function QuitarUnaFamilia(ByVal idFamilia As Integer) As String
+        Return dato.QuitarUnaFamilia(idFamilia)
+    End Function
+    Public Function QuitarTodasLasFamilias() As String
+        Return dato.QuitarTodasLasFamilias()
+    End Function
+    Public Function QuitarUnaSubFamilia(ByVal id As Integer) As String
+        Return dato.QuitarUnaSubFamilia(id)
+    End Function
 End Class

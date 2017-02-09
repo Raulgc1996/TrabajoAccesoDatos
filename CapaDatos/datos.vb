@@ -99,7 +99,63 @@ Public Class datos
         Return familias
     End Function
     Public Function CargarSubfamiasDeUnaFamilia(ByVal idFamilia As Integer) As List(Of SubFamilia)
-        Dim SubFamilias = (From drSubFamilia In dsEstado.SUBFAMILIAS Where drSubFamilia.ID_FAMILIA = idFamilia AndAlso drSubFamilia.NOMBRE <> "" AndAlso drSubFamilia.NOMBRE <> "" Select New SubFamilia(drSubFamilia.ID, drSubFamilia.NOMBRE, drSubFamilia.NOMBRE, drSubFamilia.ID_FAMILIA, drSubFamilia.valor)).ToList
+        Dim SubFamilias = (From drSubFamilia In dsEstado.SUBFAMILIAS Where drSubFamilia.ID_FAMILIA = idFamilia AndAlso drSubFamilia.NOMBRE <> "" AndAlso drSubFamilia.NOMBRE <> "" Select New SubFamilia(drSubFamilia.ID, drSubFamilia.NOMBRE, drSubFamilia.NOMBRE_COMPLETO, drSubFamilia.ID_FAMILIA, drSubFamilia.valor)).ToList
         Return SubFamilias
+    End Function
+    Public Function QuitarUnaFamilia(ByVal idFamilia As Integer) As String
+        Dim drFamiliaABorrar = dsEstado.FAMILIAS.SingleOrDefault(Function(drFmilia As DataSet1.FAMILIASRow) drFmilia.ID = idFamilia)
+        Dim SubFamiliasDelaFamiliaQuitada = (From drSubFamilia In dsEstado.SUBFAMILIAS Where drSubFamilia.ID_FAMILIA = idFamilia AndAlso drSubFamilia.NOMBRE <> "" AndAlso drSubFamilia.NOMBRE <> "" Select drSubFamilia).ToList
+        drFamiliaABorrar.NOMBRE = ""
+        drFamiliaABorrar.NOMBRE_COMPLETO = ""
+
+        Try
+            drFamiliaABorrar.EndEdit()
+            For Each subFamilia In SubFamiliasDelaFamiliaQuitada
+                subFamilia.NOMBRE = ""
+                subFamilia.NOMBRE_COMPLETO = ""
+                subFamilia.EndEdit()
+            Next
+        Catch ex As Exception
+            Return "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico"
+        Finally
+            dsEstado.FAMILIAS.AcceptChanges()
+            dsEstado.SUBFAMILIAS.AcceptChanges()
+        End Try
+        Return "ok"
+    End Function
+    Public Function QuitarTodasLasFamilias() As String
+        Dim familias = (From drfamilia In dsEstado.FAMILIAS Where drfamilia.NOMBRE <> "" AndAlso drfamilia.NOMBRE_COMPLETO <> "" Select drfamilia).ToList
+        Dim SubFamilias = (From drSubFamilia In dsEstado.SUBFAMILIAS Where drSubFamilia.NOMBRE <> "" AndAlso drSubFamilia.NOMBRE <> "" Select drSubFamilia).ToList
+        Try
+            For Each familia In familias
+                familia.NOMBRE = ""
+                familia.NOMBRE = ""
+                familia.EndEdit()
+            Next
+            For Each subFamilia In SubFamilias
+                subFamilia.NOMBRE = ""
+                subFamilia.NOMBRE_COMPLETO = ""
+                subFamilia.EndEdit()
+            Next
+        Catch ex As Exception
+            Return "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico"
+        Finally
+            dsEstado.FAMILIAS.AcceptChanges()
+            dsEstado.SUBFAMILIAS.AcceptChanges()
+        End Try
+        Return "ok"
+    End Function
+    Public Function QuitarUnaSubFamilia(ByVal id As Integer) As String
+        Dim drSubFamiliaAQuitar = dsEstado.SUBFAMILIAS.SingleOrDefault(Function(subFamilia As DataSet1.SUBFAMILIASRow) subFamilia.ID = id)
+        drSubFamiliaAQuitar.NOMBRE = ""
+        drSubFamiliaAQuitar.NOMBRE_COMPLETO = ""
+        Try
+            drSubFamiliaAQuitar.EndEdit()
+        Catch ex As Exception
+            Return "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico"
+        Finally
+            dsEstado.SUBFAMILIAS.AcceptChanges()
+        End Try
+        Return "ok"
     End Function
 End Class

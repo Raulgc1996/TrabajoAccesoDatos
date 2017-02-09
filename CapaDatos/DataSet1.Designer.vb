@@ -1735,7 +1735,8 @@ Partial Public Class DataSet1
                 Try 
                     Return CType(Me(Me.tableSUBFAMILIAS.NOMBREColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NOMBRE' de la tabla 'SUBFAMILIAS' es DBNull.", e)
+                    Return ""
+                    'Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NOMBRE' de la tabla 'SUBFAMILIAS' es DBNull.", e)
                 End Try
             End Get
             Set
@@ -1776,7 +1777,8 @@ Partial Public Class DataSet1
                 Try 
                     Return CType(Me(Me.tableSUBFAMILIAS.NOMBRE_COMPLETOColumn),String)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NOMBRE_COMPLETO' de la tabla 'SUBFAMILIAS' es DBNull.", e)
+                    Return ""
+                    'Throw New Global.System.Data.StrongTypingException("El valor de la columna 'NOMBRE_COMPLETO' de la tabla 'SUBFAMILIAS' es DBNull.", e)
                 End Try
             End Get
             Set

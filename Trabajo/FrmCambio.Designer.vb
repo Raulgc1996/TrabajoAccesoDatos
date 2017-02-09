@@ -37,6 +37,7 @@ Partial Class FrmCambio
         Me.BtnAñadirSubFamilia = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.BtnBorrarTodasLasFamilias = New System.Windows.Forms.Button()
         CType(Me.ptbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -89,6 +90,7 @@ Partial Class FrmCambio
         Me.ptbLogo.Location = New System.Drawing.Point(479, 11)
         Me.ptbLogo.Name = "ptbLogo"
         Me.ptbLogo.Size = New System.Drawing.Size(306, 350)
+        Me.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.ptbLogo.TabIndex = 8
         Me.ptbLogo.TabStop = False
         '
@@ -102,7 +104,7 @@ Partial Class FrmCambio
         '
         'BtnAñadirNuevaFamilia
         '
-        Me.BtnAñadirNuevaFamilia.Location = New System.Drawing.Point(306, 199)
+        Me.BtnAñadirNuevaFamilia.Location = New System.Drawing.Point(306, 159)
         Me.BtnAñadirNuevaFamilia.Name = "BtnAñadirNuevaFamilia"
         Me.BtnAñadirNuevaFamilia.Size = New System.Drawing.Size(127, 38)
         Me.BtnAñadirNuevaFamilia.TabIndex = 10
@@ -111,7 +113,7 @@ Partial Class FrmCambio
         '
         'BtnBorrarFamilia
         '
-        Me.BtnBorrarFamilia.Location = New System.Drawing.Point(306, 296)
+        Me.BtnBorrarFamilia.Location = New System.Drawing.Point(306, 398)
         Me.BtnBorrarFamilia.Name = "BtnBorrarFamilia"
         Me.BtnBorrarFamilia.Size = New System.Drawing.Size(127, 38)
         Me.BtnBorrarFamilia.TabIndex = 11
@@ -171,11 +173,21 @@ Partial Class FrmCambio
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "SubFamilias"
         '
+        'BtnBorrarTodasLasFamilias
+        '
+        Me.BtnBorrarTodasLasFamilias.Location = New System.Drawing.Point(306, 285)
+        Me.BtnBorrarTodasLasFamilias.Name = "BtnBorrarTodasLasFamilias"
+        Me.BtnBorrarTodasLasFamilias.Size = New System.Drawing.Size(127, 38)
+        Me.BtnBorrarTodasLasFamilias.TabIndex = 18
+        Me.BtnBorrarTodasLasFamilias.Text = "Borrar Todas Las Familias"
+        Me.BtnBorrarTodasLasFamilias.UseVisualStyleBackColor = True
+        '
         'FrmCambio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 718)
+        Me.Controls.Add(Me.BtnBorrarTodasLasFamilias)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnBorrarSubFamilia)
@@ -213,4 +225,5 @@ Partial Class FrmCambio
     Friend WithEvents BtnAñadirSubFamilia As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
+    Friend WithEvents BtnBorrarTodasLasFamilias As Button
 End Class

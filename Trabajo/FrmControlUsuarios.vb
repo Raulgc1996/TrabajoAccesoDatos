@@ -1,5 +1,6 @@
 ﻿Imports CapaEntidades
 Public Class FrmControlUsuarios
+    'Arreglar el mostrar la primera foto de una persona la primera vez que se muestre una
     Public ruta As String
     Private Sub FrmControlUsuarios_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         cboAdministradores.Items.AddRange(negocio.ObtenerAdministadores().ToArray)
@@ -54,7 +55,7 @@ Public Class FrmControlUsuarios
                     cboAdministradores.Items.AddRange(negocio.ObtenerAdministadores().ToArray)
                     cboAdministradores.DisplayMember = "Nombre"
                 End If
-                    ElseIf cboAdministradores.SelectedItem Is Nothing And cboEmpleados.SelectedItem IsNot Nothing Then
+            ElseIf cboAdministradores.SelectedItem Is Nothing And cboEmpleados.SelectedItem IsNot Nothing Then
                 Dim mensaje As String
                 mensaje = negocio.BorraEmpleado(cboEmpleados.SelectedItem.Id)
                 If mensaje = "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico" Then
