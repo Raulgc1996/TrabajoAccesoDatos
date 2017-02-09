@@ -22,53 +22,53 @@ Partial Class frmopciones
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.BtnModificarTienda = New System.Windows.Forms.Button()
+        Me.btnControlUsuarios = New System.Windows.Forms.Button()
+        Me.BtnVolver = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
-        'Button1
+        'BtnModificarTienda
         '
-        Me.Button1.Location = New System.Drawing.Point(12, 12)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(153, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Modificar tienda"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.BtnModificarTienda.Location = New System.Drawing.Point(12, 12)
+        Me.BtnModificarTienda.Name = "BtnModificarTienda"
+        Me.BtnModificarTienda.Size = New System.Drawing.Size(153, 23)
+        Me.BtnModificarTienda.TabIndex = 0
+        Me.BtnModificarTienda.Text = "Modificar tienda"
+        Me.BtnModificarTienda.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnControlUsuarios
         '
-        Me.Button2.Location = New System.Drawing.Point(12, 58)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(153, 23)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "Control de Usuarios"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnControlUsuarios.Location = New System.Drawing.Point(12, 58)
+        Me.btnControlUsuarios.Name = "btnControlUsuarios"
+        Me.btnControlUsuarios.Size = New System.Drawing.Size(153, 23)
+        Me.btnControlUsuarios.TabIndex = 1
+        Me.btnControlUsuarios.Text = "Control de Usuarios"
+        Me.btnControlUsuarios.UseVisualStyleBackColor = True
         '
-        'Button3
+        'BtnVolver
         '
-        Me.Button3.Location = New System.Drawing.Point(341, 58)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(75, 23)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "salir"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.BtnVolver.Location = New System.Drawing.Point(341, 58)
+        Me.BtnVolver.Name = "BtnVolver"
+        Me.BtnVolver.Size = New System.Drawing.Size(75, 23)
+        Me.BtnVolver.TabIndex = 2
+        Me.BtnVolver.Text = "salir"
+        Me.BtnVolver.UseVisualStyleBackColor = True
         '
         'frmopciones
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(428, 100)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.BtnVolver)
+        Me.Controls.Add(Me.btnControlUsuarios)
+        Me.Controls.Add(Me.BtnModificarTienda)
         Me.Name = "frmopciones"
         Me.Text = "frmopciones"
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents BtnModificarTienda As Button
+    Friend WithEvents btnControlUsuarios As Button
+    Friend WithEvents BtnVolver As Button
 End Class

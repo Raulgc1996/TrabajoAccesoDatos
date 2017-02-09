@@ -22,77 +22,127 @@ Partial Class FrmControlUsuarios
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.cboAdministradores = New System.Windows.Forms.ComboBox()
+        Me.ptbFoto = New System.Windows.Forms.PictureBox()
+        Me.btnborrar = New System.Windows.Forms.Button()
+        Me.btnAñadirEmpleado = New System.Windows.Forms.Button()
+        Me.btnVolver = New System.Windows.Forms.Button()
+        Me.cboEmpleados = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.btnAñadirAdmin = New System.Windows.Forms.Button()
+        CType(Me.ptbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'ComboBox1
+        'cboAdministradores
         '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 13)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(316, 21)
-        Me.ComboBox1.TabIndex = 0
+        Me.cboAdministradores.FormattingEnabled = True
+        Me.cboAdministradores.Location = New System.Drawing.Point(12, 52)
+        Me.cboAdministradores.Name = "cboAdministradores"
+        Me.cboAdministradores.Size = New System.Drawing.Size(316, 21)
+        Me.cboAdministradores.TabIndex = 0
         '
-        'PictureBox1
+        'ptbFoto
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(363, 12)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(117, 131)
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
+        Me.ptbFoto.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ptbFoto.Location = New System.Drawing.Point(363, 12)
+        Me.ptbFoto.Name = "ptbFoto"
+        Me.ptbFoto.Size = New System.Drawing.Size(117, 131)
+        Me.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbFoto.TabIndex = 1
+        Me.ptbFoto.TabStop = False
         '
-        'Button1
+        'btnborrar
         '
-        Me.Button1.Location = New System.Drawing.Point(13, 92)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(316, 50)
-        Me.Button1.TabIndex = 2
-        Me.Button1.Text = "Borrar usuario"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.btnborrar.Location = New System.Drawing.Point(13, 139)
+        Me.btnborrar.Name = "btnborrar"
+        Me.btnborrar.Size = New System.Drawing.Size(316, 50)
+        Me.btnborrar.TabIndex = 2
+        Me.btnborrar.Text = "Borrar usuario/Admin"
+        Me.btnborrar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnAñadirEmpleado
         '
-        Me.Button2.Location = New System.Drawing.Point(13, 195)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(118, 52)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Añadir nuevo Usuario"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnAñadirEmpleado.Location = New System.Drawing.Point(13, 195)
+        Me.btnAñadirEmpleado.Name = "btnAñadirEmpleado"
+        Me.btnAñadirEmpleado.Size = New System.Drawing.Size(118, 52)
+        Me.btnAñadirEmpleado.TabIndex = 3
+        Me.btnAñadirEmpleado.Text = "Añadir nuevo Empleado"
+        Me.btnAñadirEmpleado.UseVisualStyleBackColor = True
         '
-        'Button3
+        'btnVolver
         '
-        Me.Button3.Location = New System.Drawing.Point(363, 195)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(118, 52)
-        Me.Button3.TabIndex = 4
-        Me.Button3.Text = "Salir"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.btnVolver.Location = New System.Drawing.Point(363, 195)
+        Me.btnVolver.Name = "btnVolver"
+        Me.btnVolver.Size = New System.Drawing.Size(118, 52)
+        Me.btnVolver.TabIndex = 4
+        Me.btnVolver.Text = "Salir"
+        Me.btnVolver.UseVisualStyleBackColor = True
+        '
+        'cboEmpleados
+        '
+        Me.cboEmpleados.FormattingEnabled = True
+        Me.cboEmpleados.Location = New System.Drawing.Point(12, 112)
+        Me.cboEmpleados.Name = "cboEmpleados"
+        Me.cboEmpleados.Size = New System.Drawing.Size(316, 21)
+        Me.cboEmpleados.TabIndex = 5
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(13, 93)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(59, 13)
+        Me.Label1.TabIndex = 6
+        Me.Label1.Text = "Empleados"
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(13, 27)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(75, 13)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Administrdores"
+        '
+        'btnAñadirAdmin
+        '
+        Me.btnAñadirAdmin.Location = New System.Drawing.Point(210, 195)
+        Me.btnAñadirAdmin.Name = "btnAñadirAdmin"
+        Me.btnAñadirAdmin.Size = New System.Drawing.Size(118, 52)
+        Me.btnAñadirAdmin.TabIndex = 8
+        Me.btnAñadirAdmin.Text = "Añadir nuevo Administrador"
+        Me.btnAñadirAdmin.UseVisualStyleBackColor = True
         '
         'FrmControlUsuarios
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(492, 256)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.btnAñadirAdmin)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.cboEmpleados)
+        Me.Controls.Add(Me.btnVolver)
+        Me.Controls.Add(Me.btnAñadirEmpleado)
+        Me.Controls.Add(Me.btnborrar)
+        Me.Controls.Add(Me.ptbFoto)
+        Me.Controls.Add(Me.cboAdministradores)
         Me.Name = "FrmControlUsuarios"
         Me.Text = "FrmControlUsuarios"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents cboAdministradores As ComboBox
+    Friend WithEvents ptbFoto As PictureBox
+    Friend WithEvents btnborrar As Button
+    Friend WithEvents btnAñadirEmpleado As Button
+    Friend WithEvents btnVolver As Button
+    Friend WithEvents cboEmpleados As ComboBox
+    Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents btnAñadirAdmin As Button
 End Class

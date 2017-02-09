@@ -1,13 +1,22 @@
 ﻿Public Class inici
     Private Sub inici_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ajustarResolucion()
+
+        Dim tituloYLogo() As String
+        tituloYLogo = ObtenerNombreYLogoDeLaTienda()
+
+        If tituloYLogo(0) <> "Error" Then
+            lbnTitulo.Text = tituloYLogo(0)
+            ptbLogo.ImageLocation = tituloYLogo(1)
+        End If
+
     End Sub
-    Private Sub ajustarResolucion()
-        Dim desktopSize As Size
-        desktopSize = System.Windows.Forms.SystemInformation.PrimaryMonitorSize
-        For Each item As Control In Controls
-            item.Size = New Size((desktopSize.Width * item.Width) / 300, (desktopSize.Height * item.Height) / 300)
-            item.Location = New Point((desktopSize.Width * item.Location.X) / 300, (desktopSize.Height * item.Location.Y) / 300)
-        Next
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Loguin.Show()
+
     End Sub
 End Class

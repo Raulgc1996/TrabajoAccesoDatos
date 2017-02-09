@@ -23,18 +23,16 @@ Partial Class FrmAñadir
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.txtNombre = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TxtApellido1 = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TxtApellido2 = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ptbFoto = New System.Windows.Forms.PictureBox()
+        Me.btnAñadir = New System.Windows.Forms.Button()
+        Me.btnVolver = New System.Windows.Forms.Button()
+        CType(Me.ptbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
@@ -46,12 +44,12 @@ Partial Class FrmAñadir
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Nombre:"
         '
-        'TextBox1
+        'txtNombre
         '
-        Me.TextBox1.Location = New System.Drawing.Point(65, 65)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.txtNombre.Location = New System.Drawing.Point(65, 65)
+        Me.txtNombre.Name = "txtNombre"
+        Me.txtNombre.Size = New System.Drawing.Size(186, 20)
+        Me.txtNombre.TabIndex = 1
         '
         'Label2
         '
@@ -63,12 +61,12 @@ Partial Class FrmAñadir
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Añadir nuevo empleado"
         '
-        'TextBox2
+        'TxtApellido1
         '
-        Me.TextBox2.Location = New System.Drawing.Point(65, 108)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox2.TabIndex = 4
+        Me.TxtApellido1.Location = New System.Drawing.Point(65, 108)
+        Me.TxtApellido1.Name = "TxtApellido1"
+        Me.TxtApellido1.Size = New System.Drawing.Size(186, 20)
+        Me.TxtApellido1.TabIndex = 4
         '
         'Label3
         '
@@ -79,12 +77,12 @@ Partial Class FrmAñadir
         Me.Label3.TabIndex = 3
         Me.Label3.Text = "Apellido1:"
         '
-        'TextBox3
+        'TxtApellido2
         '
-        Me.TextBox3.Location = New System.Drawing.Point(65, 155)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(186, 20)
-        Me.TextBox3.TabIndex = 6
+        Me.TxtApellido2.Location = New System.Drawing.Point(65, 155)
+        Me.TxtApellido2.Name = "TxtApellido2"
+        Me.TxtApellido2.Size = New System.Drawing.Size(186, 20)
+        Me.TxtApellido2.TabIndex = 6
         '
         'Label4
         '
@@ -95,83 +93,66 @@ Partial Class FrmAñadir
         Me.Label4.TabIndex = 5
         Me.Label4.Text = "Apellido2:"
         '
-        'PictureBox1
+        'ptbFoto
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(421, 59)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(115, 132)
-        Me.PictureBox1.TabIndex = 7
-        Me.PictureBox1.TabStop = False
+        Me.ptbFoto.BackColor = System.Drawing.SystemColors.ActiveCaption
+        Me.ptbFoto.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ptbFoto.Location = New System.Drawing.Point(421, 45)
+        Me.ptbFoto.Name = "ptbFoto"
+        Me.ptbFoto.Size = New System.Drawing.Size(115, 146)
+        Me.ptbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbFoto.TabIndex = 7
+        Me.ptbFoto.TabStop = False
         '
-        'TextBox4
+        'btnAñadir
         '
-        Me.TextBox4.Location = New System.Drawing.Point(88, 192)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(106, 20)
-        Me.TextBox4.TabIndex = 9
+        Me.btnAñadir.Location = New System.Drawing.Point(15, 238)
+        Me.btnAñadir.Name = "btnAñadir"
+        Me.btnAñadir.Size = New System.Drawing.Size(128, 41)
+        Me.btnAñadir.TabIndex = 10
+        Me.btnAñadir.Text = "Añadir"
+        Me.btnAñadir.UseVisualStyleBackColor = True
         '
-        'Label5
+        'btnVolver
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(10, 195)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(70, 13)
-        Me.Label5.TabIndex = 8
-        Me.Label5.Text = "Nªempleados"
-        '
-        'Button1
-        '
-        Me.Button1.Location = New System.Drawing.Point(15, 238)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(128, 41)
-        Me.Button1.TabIndex = 10
-        Me.Button1.Text = "Añadir"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Button2
-        '
-        Me.Button2.Location = New System.Drawing.Point(408, 238)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(128, 41)
-        Me.Button2.TabIndex = 11
-        Me.Button2.Text = "Cancelar"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnVolver.Location = New System.Drawing.Point(408, 238)
+        Me.btnVolver.Name = "btnVolver"
+        Me.btnVolver.Size = New System.Drawing.Size(128, 41)
+        Me.btnVolver.TabIndex = 11
+        Me.btnVolver.Text = "Cancelar"
+        Me.btnVolver.UseVisualStyleBackColor = True
         '
         'FrmAñadir
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(548, 299)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox4)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.btnVolver)
+        Me.Controls.Add(Me.btnAñadir)
+        Me.Controls.Add(Me.ptbFoto)
+        Me.Controls.Add(Me.TxtApellido2)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TxtApellido1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtNombre)
         Me.Controls.Add(Me.Label1)
         Me.Name = "FrmAñadir"
         Me.Text = "FrmAñadir"
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ptbFoto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents txtNombre As TextBox
     Friend WithEvents Label2 As Label
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TxtApellido1 As TextBox
     Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TxtApellido2 As TextBox
     Friend WithEvents Label4 As Label
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents ptbFoto As PictureBox
+    Friend WithEvents btnAñadir As Button
+    Friend WithEvents btnVolver As Button
 End Class

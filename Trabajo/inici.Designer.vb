@@ -25,16 +25,18 @@ Partial Class inici
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lbnTitulo = New System.Windows.Forms.Label()
+        Me.ptbLogo = New System.Windows.Forms.PictureBox()
+        CType(Me.ptbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
         Me.Button1.CausesValidation = False
         Me.Button1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Button1.Location = New System.Drawing.Point(0, 195)
+        Me.Button1.Location = New System.Drawing.Point(0, 438)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(284, 66)
+        Me.Button1.Size = New System.Drawing.Size(674, 66)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "Salir"
         Me.Button1.UseVisualStyleBackColor = True
@@ -42,9 +44,9 @@ Partial Class inici
         'Button2
         '
         Me.Button2.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Button2.Location = New System.Drawing.Point(0, 129)
+        Me.Button2.Location = New System.Drawing.Point(0, 372)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(284, 66)
+        Me.Button2.Size = New System.Drawing.Size(674, 66)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Opciones"
         Me.Button2.UseVisualStyleBackColor = True
@@ -52,36 +54,45 @@ Partial Class inici
         'Button3
         '
         Me.Button3.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.Button3.Location = New System.Drawing.Point(0, 63)
+        Me.Button3.Location = New System.Drawing.Point(0, 306)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(284, 66)
+        Me.Button3.Size = New System.Drawing.Size(674, 66)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Tienda"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'Label1
+        'lbnTitulo
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(86, 24)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(101, 13)
-        Me.Label1.TabIndex = 3
-        Me.Label1.Text = "Nomvbre Pertinente"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.lbnTitulo.AutoSize = True
+        Me.lbnTitulo.Location = New System.Drawing.Point(86, 24)
+        Me.lbnTitulo.Name = "lbnTitulo"
+        Me.lbnTitulo.Size = New System.Drawing.Size(101, 13)
+        Me.lbnTitulo.TabIndex = 3
+        Me.lbnTitulo.Text = "Nomvbre Pertinente"
+        Me.lbnTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'ptbLogo
+        '
+        Me.ptbLogo.Location = New System.Drawing.Point(450, 12)
+        Me.ptbLogo.Name = "ptbLogo"
+        Me.ptbLogo.Size = New System.Drawing.Size(204, 233)
+        Me.ptbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ptbLogo.TabIndex = 4
+        Me.ptbLogo.TabStop = False
         '
         'inici
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(284, 261)
-        Me.Controls.Add(Me.Label1)
+        Me.ClientSize = New System.Drawing.Size(674, 504)
+        Me.Controls.Add(Me.ptbLogo)
+        Me.Controls.Add(Me.lbnTitulo)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Name = "inici"
-        Me.ShowInTaskbar = False
         Me.Text = "inici"
-        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        CType(Me.ptbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -90,5 +101,6 @@ Partial Class inici
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
-    Friend WithEvents Label1 As Label
+    Friend WithEvents lbnTitulo As Label
+    Friend WithEvents ptbLogo As PictureBox
 End Class

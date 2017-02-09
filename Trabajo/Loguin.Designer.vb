@@ -23,8 +23,8 @@ Partial Class Loguin
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtUsuario = New System.Windows.Forms.TextBox()
+        Me.txtContraseña = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -39,19 +39,20 @@ Partial Class Loguin
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "User"
         '
-        'TextBox1
+        'txtUsuario
         '
-        Me.TextBox1.Location = New System.Drawing.Point(26, 40)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(246, 20)
-        Me.TextBox1.TabIndex = 1
+        Me.txtUsuario.Location = New System.Drawing.Point(26, 40)
+        Me.txtUsuario.Name = "txtUsuario"
+        Me.txtUsuario.Size = New System.Drawing.Size(246, 20)
+        Me.txtUsuario.TabIndex = 1
         '
-        'TextBox2
+        'txtContraseña
         '
-        Me.TextBox2.Location = New System.Drawing.Point(25, 90)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(246, 20)
-        Me.TextBox2.TabIndex = 3
+        Me.txtContraseña.Location = New System.Drawing.Point(25, 90)
+        Me.txtContraseña.Name = "txtContraseña"
+        Me.txtContraseña.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.txtContraseña.Size = New System.Drawing.Size(246, 20)
+        Me.txtContraseña.TabIndex = 3
         '
         'Label2
         '
@@ -87,9 +88,9 @@ Partial Class Loguin
         Me.ClientSize = New System.Drawing.Size(293, 165)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.txtContraseña)
         Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.txtUsuario)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Loguin"
         Me.Text = "Loguin"
@@ -99,8 +100,8 @@ Partial Class Loguin
     End Sub
 
     Friend WithEvents Label1 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtUsuario As TextBox
+    Friend WithEvents txtContraseña As TextBox
     Friend WithEvents Label2 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
