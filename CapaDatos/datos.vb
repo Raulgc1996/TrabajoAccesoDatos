@@ -105,12 +105,13 @@ Public Class datos
     Public Function QuitarUnaFamilia(ByVal idFamilia As Integer) As String
         Dim drFamiliaABorrar = dsEstado.FAMILIAS.SingleOrDefault(Function(drFmilia As DataSet1.FAMILIASRow) drFmilia.ID = idFamilia)
         Dim SubFamiliasDelaFamiliaQuitada = (From drSubFamilia In dsEstado.SUBFAMILIAS Where drSubFamilia.ID_FAMILIA = idFamilia AndAlso drSubFamilia.NOMBRE <> "" AndAlso drSubFamilia.NOMBRE <> "" Select drSubFamilia).ToList
-        drFamiliaABorrar.NOMBRE = ""
-        drFamiliaABorrar.NOMBRE_COMPLETO = ""
-
         Try
+            drFamiliaABorrar.BeginEdit()
+            drFamiliaABorrar.NOMBRE = ""
+            drFamiliaABorrar.NOMBRE_COMPLETO = ""
             drFamiliaABorrar.EndEdit()
             For Each subFamilia In SubFamiliasDelaFamiliaQuitada
+                subFamilia.BeginEdit()
                 subFamilia.NOMBRE = ""
                 subFamilia.NOMBRE_COMPLETO = ""
                 subFamilia.EndEdit()
@@ -127,15 +128,17 @@ Public Class datos
         Dim familias = (From drfamilia In dsEstado.FAMILIAS Where drfamilia.NOMBRE <> "" AndAlso drfamilia.NOMBRE_COMPLETO <> "" Select drfamilia).ToList
         Dim SubFamilias = (From drSubFamilia In dsEstado.SUBFAMILIAS Where drSubFamilia.NOMBRE <> "" AndAlso drSubFamilia.NOMBRE <> "" Select drSubFamilia).ToList
         Try
+
             For Each familia In familias
+
                 familia.NOMBRE = ""
                 familia.NOMBRE = ""
-                familia.EndEdit()
+                daSubFamilias.Update(familia)
             Next
             For Each subFamilia In SubFamilias
                 subFamilia.NOMBRE = ""
                 subFamilia.NOMBRE_COMPLETO = ""
-                subFamilia.EndEdit()
+                daSubFamilias.Update(subFamilia)
             Next
         Catch ex As Exception
             Return "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico"
@@ -147,10 +150,42 @@ Public Class datos
     End Function
     Public Function QuitarUnaSubFamilia(ByVal id As Integer) As String
         Dim drSubFamiliaAQuitar = dsEstado.SUBFAMILIAS.SingleOrDefault(Function(subFamilia As DataSet1.SUBFAMILIASRow) subFamilia.ID = id)
-        drSubFamiliaAQuitar.NOMBRE = ""
-        drSubFamiliaAQuitar.NOMBRE_COMPLETO = ""
         Try
-            drSubFamiliaAQuitar.EndEdit()
+
+            drSubFamiliaAQuitar.NOMBRE = ""
+            drSubFamiliaAQuitar.NOMBRE_COMPLETO = ""
+            daSubFamilias.Update(drSubFamiliaAQuitar)
+
+        Catch ex As Exception
+            Return "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico"
+        Finally
+            dsEstado.SUBFAMILIAS.AcceptChanges()
+        End Try
+        Return "ok"
+    End Function
+    Public Function AñadirNuevaFamilia(ByVal abrebiaturaNombre As String, ByVal nombre As String) As String
+        Dim familiaNueva = dsEstado.FAMILIAS.First(Function(drFamilia As DataSet1.FAMILIASRow) drFamilia.NOMBRE = "" AndAlso drFamilia.NOMBRE_COMPLETO = "")
+        Try
+
+            familiaNueva.NOMBRE = abrebiaturaNombre
+            familiaNueva.NOMBRE_COMPLETO = nombre
+
+            daFamilias.Update(familiaNueva)
+
+        Catch ex As Exception
+            Return "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico"
+        Finally
+            dsEstado.FAMILIAS.AcceptChanges()
+        End Try
+        Return "ok"
+    End Function
+    Public Function AñadirNuevaSubfamilia(ByVal id As Integer, ByVal abrebiatura As String, ByVal nombre As String) As String
+        Dim subFamiliaNueva = dsEstado.SUBFAMILIAS.First(Function(drsubFamilia As DataSet1.SUBFAMILIASRow) drsubFamilia.ID_FAMILIA = id AndAlso drsubFamilia.NOMBRE = "" AndAlso drsubFamilia.NOMBRE_COMPLETO = "")
+        Try
+
+            subFamiliaNueva.NOMBRE = abrebiatura
+            subFamiliaNueva.NOMBRE_COMPLETO = nombre
+            daSubFamilias.Update(subFamiliaNueva)
         Catch ex As Exception
             Return "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico"
         Finally

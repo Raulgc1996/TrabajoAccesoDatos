@@ -38,4 +38,10 @@ Public Class Negocio
     Public Function QuitarUnaSubFamilia(ByVal id As Integer) As String
         Return dato.QuitarUnaSubFamilia(id)
     End Function
+    Public Function AñadirNuevaFamilia(ByVal abrebiaturaNombre As String, ByVal nombre As String) As String
+        Return dato.AñadirNuevaFamilia(abrebiaturaNombre, nombre)
+    End Function
+    Public Function AñadirNuevaSubfamilia(ByVal id As Integer, ByVal abrebiatura As String, ByVal nombre As String) As String
+        Return dato.AñadirNuevaSubfamilia(id, abrebiatura, nombre)
+    End Function
 End Class

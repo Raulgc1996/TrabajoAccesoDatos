@@ -110,6 +110,12 @@
     <Compile Include="frmopciones.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FrmParaAñadirFamiliasYSubFamilias.Designer.vb">
+      <DependentUpon>FrmParaAñadirFamiliasYSubFamilias.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParaAñadirFamiliasYSubFamilias.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="inici.Designer.vb">
       <DependentUpon>inici.vb</DependentUpon>
     </Compile>
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmopciones.resx">
       <DependentUpon>frmopciones.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParaAñadirFamiliasYSubFamilias.resx">
+      <DependentUpon>FrmParaAñadirFamiliasYSubFamilias.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="inici.resx">
       <DependentUpon>inici.vb</DependentUpon>

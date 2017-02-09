@@ -1,7 +1,8 @@
 ﻿Imports CapaNegocio
 Module Modulo
     Public negocio As New Negocio
-
+    Public esFamiliaOSubFamilia As String
+    Public idFamilia As Integer
     Public Function ObtenerNombreYLogoDeLaTienda() As String()
         Dim fileReader As String
         Try

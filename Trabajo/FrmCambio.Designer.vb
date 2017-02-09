@@ -37,7 +37,9 @@ Partial Class FrmCambio
         Me.BtnAñadirSubFamilia = New System.Windows.Forms.Button()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.BtnBorrarTodasLasFamilias = New System.Windows.Forms.Button()
+        Me.btnRefrescar = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnRefrescar2 = New System.Windows.Forms.Button()
         CType(Me.ptbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -139,7 +141,7 @@ Partial Class FrmCambio
         '
         'BtnBorrarSubFamilia
         '
-        Me.BtnBorrarSubFamilia.Location = New System.Drawing.Point(334, 606)
+        Me.BtnBorrarSubFamilia.Location = New System.Drawing.Point(334, 663)
         Me.BtnBorrarSubFamilia.Name = "BtnBorrarSubFamilia"
         Me.BtnBorrarSubFamilia.Size = New System.Drawing.Size(127, 38)
         Me.BtnBorrarSubFamilia.TabIndex = 15
@@ -148,7 +150,7 @@ Partial Class FrmCambio
         '
         'BtnAñadirSubFamilia
         '
-        Me.BtnAñadirSubFamilia.Location = New System.Drawing.Point(336, 523)
+        Me.BtnAñadirSubFamilia.Location = New System.Drawing.Point(334, 476)
         Me.BtnAñadirSubFamilia.Name = "BtnAñadirSubFamilia"
         Me.BtnAñadirSubFamilia.Size = New System.Drawing.Size(127, 38)
         Me.BtnAñadirSubFamilia.TabIndex = 14
@@ -173,21 +175,41 @@ Partial Class FrmCambio
         Me.Label4.TabIndex = 17
         Me.Label4.Text = "SubFamilias"
         '
-        'BtnBorrarTodasLasFamilias
+        'btnRefrescar
         '
-        Me.BtnBorrarTodasLasFamilias.Location = New System.Drawing.Point(306, 285)
-        Me.BtnBorrarTodasLasFamilias.Name = "BtnBorrarTodasLasFamilias"
-        Me.BtnBorrarTodasLasFamilias.Size = New System.Drawing.Size(127, 38)
-        Me.BtnBorrarTodasLasFamilias.TabIndex = 18
-        Me.BtnBorrarTodasLasFamilias.Text = "Borrar Todas Las Familias"
-        Me.BtnBorrarTodasLasFamilias.UseVisualStyleBackColor = True
+        Me.btnRefrescar.Location = New System.Drawing.Point(306, 239)
+        Me.btnRefrescar.Name = "btnRefrescar"
+        Me.btnRefrescar.Size = New System.Drawing.Size(127, 38)
+        Me.btnRefrescar.TabIndex = 18
+        Me.btnRefrescar.Text = "Refrescar"
+        Me.btnRefrescar.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(306, 323)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(127, 38)
+        Me.Button1.TabIndex = 19
+        Me.Button1.Text = "Borrar Todas Las Familias"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'btnRefrescar2
+        '
+        Me.btnRefrescar2.Location = New System.Drawing.Point(334, 573)
+        Me.btnRefrescar2.Name = "btnRefrescar2"
+        Me.btnRefrescar2.Size = New System.Drawing.Size(127, 38)
+        Me.btnRefrescar2.TabIndex = 20
+        Me.btnRefrescar2.Text = "Refrescar"
+        Me.btnRefrescar2.UseVisualStyleBackColor = True
         '
         'FrmCambio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(801, 718)
-        Me.Controls.Add(Me.BtnBorrarTodasLasFamilias)
+        Me.Controls.Add(Me.btnRefrescar2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.btnRefrescar)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.BtnBorrarSubFamilia)
@@ -225,5 +247,7 @@ Partial Class FrmCambio
     Friend WithEvents BtnAñadirSubFamilia As Button
     Friend WithEvents Label3 As Label
     Friend WithEvents Label4 As Label
-    Friend WithEvents BtnBorrarTodasLasFamilias As Button
+    Friend WithEvents btnRefrescar As Button
+    Friend WithEvents Button1 As Button
+    Friend WithEvents btnRefrescar2 As Button
 End Class

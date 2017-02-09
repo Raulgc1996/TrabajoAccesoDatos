@@ -2,13 +2,11 @@
 Imports CapaEntidades
 Public Class FrmCambio
     Private ruta As String
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-    End Sub
-
     Private Sub FrmCambio_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lsbFamilias.Items.AddRange(negocio.CargarFamiliasExistentes.ToArray)
         lsbFamilias.DisplayMember = "NombreCompleto"
+        btnRefrescar.Enabled = False
+        btnRefrescar2.Enabled = False
     End Sub
 
     Private Sub lsbFamilias_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lsbFamilias.SelectedIndexChanged
@@ -97,17 +95,7 @@ Public Class FrmCambio
         End If
     End Sub
 
-    Private Sub BtnBorrarTodasLasFamilias_Click(sender As Object, e As EventArgs) Handles BtnBorrarTodasLasFamilias.Click
-        Dim mensaje As String
-        mensaje = negocio.QuitarTodasLasFamilias()
-        If mensaje = "Ha surgido un error innesperado con la base de datos consulte con el servicio tecnico" Then
-            MessageBox.Show(mensaje)
-        Else
-            lsbFamilias.Items.Clear()
-            lsbFamilias.Items.AddRange(negocio.CargarFamiliasExistentes.ToArray)
-            lsbFamilias.DisplayMember = "NombreCompleto"
-        End If
-    End Sub
+
 
     Private Sub BtnBorrarFamilia_Click(sender As Object, e As EventArgs) Handles BtnBorrarFamilia.Click
         If lsbFamilias.SelectedItem Is Nothing Then
@@ -123,5 +111,45 @@ Public Class FrmCambio
                 lsbFamilias.DisplayMember = "NombreCompleto"
             End If
         End If
+    End Sub
+
+    Private Sub BtnAñadirNuevaFamilia_Click(sender As Object, e As EventArgs) Handles BtnAñadirNuevaFamilia.Click
+        If lsbFamilias.Items.Count = 10 Then
+            MessageBox.Show("No se pueden añadir ya mas familias")
+        Else
+            esFamiliaOSubFamilia = "Familia"
+            FrmParaAñadirFamiliasYSubFamilias.Show()
+            btnRefrescar.Enabled = True
+        End If
+    End Sub
+
+    Private Sub BtnAñadirSubFamilia_Click(sender As Object, e As EventArgs) Handles BtnAñadirSubFamilia.Click
+        If lsbSubfamilias.Items.Count = 10 Then
+            MessageBox.Show("No se pueden añadir ya mas familias")
+        Else
+            esFamiliaOSubFamilia = "SubFamilia"
+            idFamilia = lsbFamilias.SelectedItem.Id
+            FrmParaAñadirFamiliasYSubFamilias.Show()
+            btnRefrescar2.Enabled = True
+        End If
+    End Sub
+
+    Private Sub btnRefrescar2_Click(sender As Object, e As EventArgs) Handles btnRefrescar2.Click
+        lsbSubfamilias.Items.Clear()
+        lsbSubfamilias.Items.AddRange(negocio.CargarSubfamiasDeUnaFamilia(lsbFamilias.SelectedItem.Id).ToArray)
+        lsbSubfamilias.DisplayMember = "NombreCompleto"
+        btnRefrescar2.Enabled = False
+    End Sub
+
+    Private Sub btnRefrescar_Click(sender As Object, e As EventArgs) Handles btnRefrescar.Click
+        lsbFamilias.Items.Clear()
+        lsbFamilias.Items.AddRange(negocio.CargarFamiliasExistentes().ToArray)
+        lsbFamilias.DisplayMember = "NombreCompleto"
+        btnRefrescar.Enabled = False
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        inici.Show()
+        Me.Close()
     End Sub
 End Class
